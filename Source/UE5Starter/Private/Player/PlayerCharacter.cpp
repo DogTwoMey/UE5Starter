@@ -13,6 +13,8 @@ APlayerCharacter::APlayerCharacter() {
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay() {
 	Super::BeginPlay();
+	initializeProperty();
+	BeginPlayLog();
 }
 
 // Called every frame
@@ -53,7 +55,10 @@ bool APlayerCharacter::initializeComponent() {
 	PlayerCamera->SetupAttachment(CameraBoom);
 	// PlayerCamera->SetupAttachment(GetMesh(), FName("RootSocket"));
 	
+	return true;
+}
+
+void APlayerCharacter::BeginPlayLog() {
 	FVector position = CameraBoom->GetComponentLocation();
 	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Blue, FString::Printf(TEXT("APlayerCharacter::initializeComponent, camera_position: %f,%f,%f"), position[0], position[1], position[2]));
-	return true;
 }

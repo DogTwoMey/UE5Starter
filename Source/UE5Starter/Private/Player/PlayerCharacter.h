@@ -31,6 +31,8 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	bool initializeProperty();
 
+	UFUNCTION(BlueprintCallable)
+	void BeginPlayLog();
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Camera, meta=(AllowPrivateAccess = "true"))
 	TObjectPtr<USpringArmComponent> CameraBoom;
