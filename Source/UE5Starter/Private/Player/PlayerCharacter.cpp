@@ -7,6 +7,7 @@
 APlayerCharacter::APlayerCharacter() {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	initializeComponent();
 }
 
 // Called when the game starts or when spawned
@@ -25,7 +26,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 }
 
 bool APlayerCharacter::getCoin(int count) {
-	if(this->coinCount >= this->COIN_MAX_COUNT) {
+	UE_LOG(LogTemp, Log, TEXT("getCoin"));
+	if (this->coinCount >= this->COIN_MAX_COUNT) {
 		return false;
 	}
 	this->coinCount += count;
@@ -35,7 +37,23 @@ bool APlayerCharacter::getCoin(int count) {
 
 
 bool APlayerCharacter::initializeProperty() {
-	UE_LOG(LogTemp, Log, TEXT("APlayerCharacter::initializeProperty"))
+	UE_LOG(LogTemp, Log, TEXT("APlayerCharacter::initializeProperty"));
 	this->coinCount = 0;
+	return true;
+}
+
+bool APlayerCharacter::initializeComponent() {
+	UE_LOG(LogTemp, Log, TEXT("APlayerCharacter::initializeComponent"));
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("CameraBoom");
+	CameraBoom->SetupAttachment(RootComponent);
+	CameraBoom->TargetArmLength = 600.f;
+	CameraBoom->SetRelativeRotation(FRotator(-40.f, 0.f, 0.f));
+	
+	PlayerCamera = CreateDefaultSubobject<UCameraComponent>("Player Camera");
+	PlayerCamera->SetupAttachment(CameraBoom);
+	// PlayerCamera->SetupAttachment(GetMesh(), FName("RootSocket"));
+	
+	FVector position = CameraBoom->GetComponentLocation();
+	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Blue, FString::Printf(TEXT("APlayerCharacter::initializeComponent, camera_position: %f,%f,%f"), position[0], position[1], position[2]));
 	return true;
 }

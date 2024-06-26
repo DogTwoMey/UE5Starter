@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
@@ -29,6 +31,16 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	bool initializeProperty();
 
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Camera, meta=(AllowPrivateAccess = "true"))
+	TObjectPtr<USpringArmComponent> CameraBoom;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Camera, meta=(AllowPrivateAccess = "true"))
+	TObjectPtr<UCameraComponent> PlayerCamera;
+
+	UFUNCTION()
+	bool initializeComponent();
+	
+	
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
