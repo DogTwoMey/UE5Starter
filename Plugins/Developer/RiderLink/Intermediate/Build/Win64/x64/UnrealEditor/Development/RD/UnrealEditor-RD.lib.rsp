@@ -61,5 +61,6 @@
 "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\fmt.cpp.obj"
 "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.obj"
 "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\stdout_sinks.cpp.obj"
-"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Default.rc2.res"
+"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\PerModuleInline.gen.cpp.obj"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
 /OUT:"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\UnrealEditor-RD.lib"

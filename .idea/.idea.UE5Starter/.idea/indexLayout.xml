@@ -3,6 +3,7 @@
   <component name="UserContentModel">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Plugins/Puerts</Path>
       <Path>Source/UE5Starter/Private</Path>
       <Path>Source/UE5Starter/Public</Path>
     </explicitIncludes>

@@ -1,8 +1,10 @@
 "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\RdBindableBase.cpp"
 /FI"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
 /Fo"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.obj"
+/experimental:log "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.sarif"
 /sourceDependencies "D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.dep.json"
 @"D:\UE5Project\UE5Starter\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi
