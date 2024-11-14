@@ -255,6 +255,7 @@
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
       "outputPath": "D:\\UE5Project\\UE5Starter\\Plugins\\Puerts\\Source\\CSharpParamDefaultValueMetas\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],

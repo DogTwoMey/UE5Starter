@@ -11,10 +11,14 @@
 #include "CoreMinimal.h"
 #include "UsingTypeDecl.hpp"
 
+__DefCDataConverter(FFloat16Color);
+
 struct AutoRegisterForFLinearColor
 {
     AutoRegisterForFLinearColor()
     {
+        puerts::DefineClass<FFloat16Color>().Register();
+
         puerts::DefineClass<FLinearColor>()
             .Constructor(CombineConstructors(MakeConstructor(FLinearColor), MakeConstructor(FLinearColor, EForceInit),
                 MakeConstructor(FLinearColor, float, float, float, float), MakeConstructor(FLinearColor, const FColor&),
@@ -63,6 +67,16 @@ struct AutoRegisterForFLinearColor
             .Method("GetLuminance", MakeFunction(&FLinearColor::GetLuminance))
             .Method("ToString", MakeFunction(&FLinearColor::ToString))
             .Method("InitFromString", MakeFunction(&FLinearColor::InitFromString))
+            //.Variable("Pow22OneOver255Table", MakeVariable(&FLinearColor::Pow22OneOver255Table))
+            //.Variable("sRGBToLinearTable", MakeVariable(&FLinearColor::sRGBToLinearTable))
+            .Variable("White", MakeReadonlyVariable(&FLinearColor::White))
+            .Variable("Gray", MakeReadonlyVariable(&FLinearColor::Gray))
+            .Variable("Black", MakeReadonlyVariable(&FLinearColor::Black))
+            .Variable("Transparent", MakeReadonlyVariable(&FLinearColor::Transparent))
+            .Variable("Red", MakeReadonlyVariable(&FLinearColor::Red))
+            .Variable("Green", MakeReadonlyVariable(&FLinearColor::Green))
+            .Variable("Blue", MakeReadonlyVariable(&FLinearColor::Blue))
+            .Variable("Yellow", MakeReadonlyVariable(&FLinearColor::Yellow))
             .Register();
     }
 };

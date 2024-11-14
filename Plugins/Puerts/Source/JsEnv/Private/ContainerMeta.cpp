@@ -227,8 +227,7 @@ PropertyMacro* FContainerMeta::GetObjectProperty(UField* Field)
 #else
         if (Enum->GetCppForm() == UEnum::ECppForm::EnumClass)
         {
-            FEnumProperty* EnumProp =
-                new FEnumProperty(PropertyMetaRoot, NAME_None, RF_Transient, 0, CPF_HasGetValueTypeHash, Enum);
+            FEnumProperty* EnumProp = new FEnumProperty(PropertyMetaRoot, NAME_None, RF_Transient);
             FNumericProperty* UnderlyingProp = new FByteProperty(EnumProp, TEXT("UnderlyingType"), RF_Transient);
             EnumProp->AddCppProperty(UnderlyingProp);
             EnumProp->ElementSize = UnderlyingProp->ElementSize;

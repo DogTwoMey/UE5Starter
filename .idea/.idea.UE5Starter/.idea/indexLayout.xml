@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="UserContentModel">
-    <attachedFolders />
+    <attachedFolders>
+      <Path>Content/JavaScript</Path>
+    </attachedFolders>
     <explicitIncludes>
       <Path>Plugins/Puerts</Path>
       <Path>Source/UE5Starter/Private</Path>
